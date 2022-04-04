@@ -12,19 +12,19 @@ public class RoadCamera {
 
         //=============================================================
 
-        System.out.println("Введите скорость автомобиля:");
+        System.out.println("Give speed camera:");
 
         //Скорость автомобиля
         int oncomingSpeed = Integer.parseInt((new BufferedReader(new InputStreamReader(System.in))).readLine());
         if (oncomingSpeed >= criminalSpeed) {
-            System.out.println("Вызов полиции...");
+            System.out.println("Take police ...");
         } else if (oncomingSpeed > maxOncomingSpeed) {
             int overSpeed = oncomingSpeed - maxOncomingSpeed;
             int gradesCount = overSpeed / speedFineGrade;
             int fine = finePerGrade * gradesCount;
-            System.out.println("Сумма штрафа: " + fine);
+            System.out.println("How much many: " + fine);
         } else {
-            System.out.println("Скорость не превышена");
+            System.out.println("The highest speed");
         }
     }
 }
